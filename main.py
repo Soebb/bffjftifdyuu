@@ -41,9 +41,9 @@ async def start(bot, update):
 @FayasNoushad.on_message(filters.channel & (filters.video | filters.document))
 async def autopost(bot, update):
     if (update.chat_id == -1001264182630):
-    try:
-        if "Ghermez" in update.file_name:
-            time.sleep(30)
-            await update.copy(chat_id=-1001448973320)
-    except Exception as error:
-        print(error)
+        try:
+            if "Ghermez" in update.file_name:
+                time.sleep(30)
+                await update.copy(chat_id=-1001448973320)
+        except Exception as error:
+            print(error)
