@@ -34,7 +34,7 @@ async def start(bot, update):
 
 @FayasNoushad.on_message(filters.channel & (filters.video | filters.document))
 async def autopost(bot, update):
-    if (update.chat_id == -1001264182630):
+    if (update.chat.id == -1001264182630):
         try:
             if "Ghermez" in update.file_name:
                 time.sleep(20)
