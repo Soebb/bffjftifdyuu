@@ -7,7 +7,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-
+import time
 
 FayasNoushad = Client(
     "Channel Auto Post Bot",
@@ -40,19 +40,10 @@ async def start(bot, update):
 
 @FayasNoushad.on_message(filters.channel & (filters.video | filters.document))
 async def autopost(bot, update):
-    if (update.chat_id == -1001457054266):
+    if (update.chat_id == -1001264182630):
     try:
         if "Ghermez" in update.file_name:
-            await update.copy(chat_id=-1001166919373)
-        elif "Chukurova" in update.file_name:
-            await update.copy(chat_id=-1001437520825)
-        elif "Mojeze" in update.file_name:
-            await update.copy(chat_id=-1001071120514)
-        elif "Yek Jonun Yek Eshgh" in update.file_name:
-            await update.copy(chat_id=-1001546442991)
-        elif "2020" in update.file_name:
-            await update.copy(chat_id=-1001322014891)
-        elif "Eshghe Mashroot" in update.file_name:
-            await update.copy(chat_id=-1001409508844)
+            time.sleep(30)
+            await update.copy(chat_id=-1001448973320)
     except Exception as error:
         print(error)
