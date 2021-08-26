@@ -1,9 +1,3 @@
-# Made with python3
-# (C) @FayasNoushad
-# Copyright permission under MIT License
-# All rights reserved by FayasNoushad
-# License -> https://github.com/FayasNoushad/Channel-Auto-Post-Bot/blob/main/LICENSE
-
 import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -43,10 +37,9 @@ async def autopost(bot, update):
     if (update.chat_id == -1001264182630):
         try:
             if "Ghermez" in update.file_name:
-                time.sleep(10)
+                time.sleep(20)
                 await update.copy(chat_id=-1001448973320)
         except Exception as error:
             print(error)
-    else:
-        return
-          
+    
+FayasNoushad.run()
