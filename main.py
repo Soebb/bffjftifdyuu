@@ -32,7 +32,7 @@ async def start(bot, update):
         reply_markup=START_BUTTONS
     )
 
-@FayasNoushad.on_message(filters.channel & (filters.video | filters.document))
+@FayasNoushad.on_message(filters.channel & filters.edited & (filters.video | filters.document))
 async def autopost(bot, update):
     media = update.video or update.document or update.audio
     if (update.chat.id == -1001264182630):
