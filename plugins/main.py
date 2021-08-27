@@ -17,7 +17,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@FayasNoushad.on_message(filters.private & filters.command(["start"]))
+@Client.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
@@ -25,7 +25,7 @@ async def start(bot, update):
         reply_markup=START_BUTTONS
     )
 
-@FayasNoushad.on_message(filters.channel & filters.edited & (filters.video | filters.document))
+@Client.on_message(filters.channel & filters.edited & (filters.video | filters.document))
 async def autopost(bot, update):
     media = update.video or update.document or update.audio
     if (update.chat.id == -1001264182630):
