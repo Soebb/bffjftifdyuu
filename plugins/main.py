@@ -3,13 +3,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 
-FayasNoushad = Client(
-    "Channel Auto Post Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
-)
-
 START_TEXT = """
 Hello {}, I am a channel auto post telegram bot.
 
@@ -43,4 +36,4 @@ async def autopost(bot, update):
         except Exception as error:
             print(error)
     
-FayasNoushad.run()
+
