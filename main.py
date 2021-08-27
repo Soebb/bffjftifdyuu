@@ -34,7 +34,7 @@ async def start(bot, update):
 
 @FayasNoushad.on_message(filters.channel & (filters.video | filters.document))
 async def autopost(bot, update):
-    media = update.video or update.document
+    media = update.video or update.document or update.audio
     if (update.chat.id == -1001264182630):
         try:
             if not "ghermez" in media.file_name:
